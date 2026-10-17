@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /intake.html
 Disallow: /intake-thanks.html
 
 Sitemap: https://speaklevel.com.au/sitemap.xml

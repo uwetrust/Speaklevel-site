@@ -108,7 +108,7 @@
   });
 
   /* ----- Intersection Observer: Fade In on Scroll ----- */
-  var observeTargets = document.querySelectorAll('.card, .step, .testimonial-card, .kit-feature-card, .section-header');
+  var observeTargets = document.querySelectorAll('.card, .step, .kit-feature-card, .choose-card, .section-header');
 
   if ('IntersectionObserver' in window) {
     var style = document.createElement('style');
@@ -133,83 +133,5 @@
     });
   }
 
-
-  /* ----- Intake form (intake.html) ----- */
-  var intakeForm = document.getElementById('intake-form');
-  if (intakeForm) {
-    // Send people to the thanks page on whichever site they're on (preview or live).
-    var nextField = intakeForm.querySelector('input[name="_next"][data-next-page]');
-    if (nextField && /^https?:$/.test(window.location.protocol)) {
-      nextField.value = new URL(nextField.getAttribute('data-next-page'), window.location.href).href;
-    }
-
-    // Pre-select the industry when arriving from a homepage industry card (?industry=...).
-    var industryMap = {
-      hospitality: 'Hospitality / Food Service',
-      retail: 'Retail / Customer Service',
-      healthcare: 'Healthcare / Nursing',
-      'aged-care': 'Aged Care / Disability',
-      trades: 'Construction / Trades',
-      logistics: 'Warehousing / Logistics'
-    };
-    try {
-      var wanted = industryMap[new URLSearchParams(window.location.search).get('industry')];
-      var industrySelect = document.getElementById('industry');
-      if (wanted && industrySelect) industrySelect.value = wanted;
-    } catch (e) { /* ignore */ }
-
-    // Stop double-submits once the browser has validated the form.
-    intakeForm.addEventListener('submit', function () {
-      var btn = intakeForm.querySelector('button[type="submit"]');
-      if (btn) {
-        btn.disabled = true;
-        btn.textContent = 'Sending…';
-      }
-    });
-  }
-
-  // ─── Booked confirmation banner ────────────────────────────────
-  // When the user lands on ?booked=1 (after Calendly schedule),
-  // reveal the celebratory banner and clean up the URL.
-  function initBookedBanner() {
-    try {
-      var params = new URLSearchParams(window.location.search);
-      if (!params.has('booked')) return;
-
-      var banner = document.getElementById('booked-banner');
-      if (!banner) return;
-
-      banner.hidden = false;
-      // Allow CSS transition to fire on next frame
-      requestAnimationFrame(function () {
-        banner.classList.add('booked-banner--visible');
-      });
-
-      var dismiss = banner.querySelector('[data-booked-dismiss]');
-      if (dismiss) {
-        dismiss.addEventListener('click', function () {
-          banner.classList.remove('booked-banner--visible');
-          setTimeout(function () { banner.hidden = true; }, 300);
-        });
-      }
-
-      // Auto-hide after 12s so it doesn't sit forever
-      setTimeout(function () {
-        if (!banner.hidden) {
-          banner.classList.remove('booked-banner--visible');
-          setTimeout(function () { banner.hidden = true; }, 300);
-        }
-      }, 12000);
-
-      // Strip the query param so refresh doesn't re-trigger
-      if (window.history && window.history.replaceState) {
-        var url = window.location.pathname + window.location.hash;
-        window.history.replaceState({}, document.title, url);
-      }
-    } catch (err) {
-      // Fail silently — banner is purely additive
-    }
-  }
-  initBookedBanner();
 
 })();

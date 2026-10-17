@@ -2635,7 +2635,7 @@ a, button, [role="button"], [role="link"], input, textarea, select {
 }
 
 /* =============================================
-   OCT 2026 ADDITIONS — sources, placeholders, consent, privacy page
+   OCT 2026 ADDITIONS — sources, product chooser, privacy page
    ============================================= */
 
 /* Stat source line under the homepage "why this matters" card */
@@ -2650,55 +2650,6 @@ a, button, [role="button"], [role="link"], input, textarea, select {
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 2px;
-}
-
-/* Placeholder testimonials — visibly marked until real quotes arrive */
-.testimonial-card--placeholder {
-  border-style: dashed;
-  opacity: 0.85;
-}
-.testimonial-card--placeholder blockquote,
-.testimonial-card--placeholder cite {
-  color: var(--color-text-muted);
-}
-.placeholder-tag {
-  display: inline-block;
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-text);
-  background: var(--color-amber-light);
-  border: 1px solid var(--color-amber);
-  border-radius: 999px;
-  padding: 2px 10px;
-  margin-bottom: var(--space-3);
-}
-
-/* Intake consent checkbox */
-.form-group--consent {
-  margin-top: var(--space-2);
-}
-.consent-option {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  font-size: var(--text-sm);
-  line-height: 1.5;
-  cursor: pointer;
-  font-weight: 400;
-}
-.consent-option input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  min-width: 20px;
-  margin-top: 1px;
-  accent-color: var(--color-primary);
-}
-.consent-option a,
-.form-note a {
-  color: var(--color-primary);
-  text-decoration: underline;
 }
 
 /* Privacy / legal page */
@@ -2762,28 +2713,70 @@ a[href^="mailto:"] {
   overflow-wrap: break-word;
 }
 
-/* Consent checkbox: undo the general text-input styles */
-.form-group .consent-option {
+
+/* Product chooser: "Which one is right for you?" */
+.choose {
+  background: var(--color-teal-wash);
+}
+.choose-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  max-width: 880px;
+  margin: 0 auto;
+}
+.choose-card {
   display: flex;
-  align-items: flex-start;
-  gap: var(--space-3);
-  font-weight: 400;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-6);
+}
+.choose-card--featured {
+  border: 2px solid var(--color-amber);
+}
+.choose-card .chip {
+  align-self: flex-start;
+  margin-bottom: var(--space-4);
+}
+.choose-card h3 {
+  margin: 0 0 var(--space-2);
+}
+.choose-price {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text);
+  margin: 0 0 var(--space-4);
+}
+.choose-for {
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-5);
+  line-height: 1.6;
+}
+.choose-card .check-list {
+  margin-bottom: var(--space-6);
+  flex: 1;
+}
+.choose-foot {
+  text-align: center;
+  color: var(--color-text-muted);
   font-size: var(--text-sm);
-  line-height: 1.5;
-  margin: 0;
+  margin: var(--space-8) auto 0;
+  max-width: 560px;
+  line-height: 1.7;
 }
-.form-group .consent-option input[type="checkbox"] {
-  -webkit-appearance: auto;
-  appearance: auto;
-  width: 20px;
-  height: 20px;
-  min-width: 20px;
-  padding: 0;
-  margin: 2px 0 0;
-  border-radius: 4px;
-  accent-color: var(--color-primary);
-  cursor: pointer;
+.choose-foot a,
+.hero-small a,
+.hero-gauge-prompt a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
-.legal-page section p {
-  margin: 0 0 var(--space-3);
+@media (max-width: 720px) {
+  .choose-grid {
+    grid-template-columns: 1fr;
+  }
 }
