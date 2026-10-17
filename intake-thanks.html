@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanks — Now Book Your Free Job-Readiness Audit | SpeakLevel</title>
+  <meta name="description" content="Your intake is in. Book your free 30-minute Job-Readiness Audit and walk away with a personalised plan.">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700&display=swap">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="./index.html" class="nav-logo" aria-label="SpeakLevel home">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M8 28V14a2 2 0 012-2h6a2 2 0 012 2v14" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M5 10C5 6 9 3 14 3s9 3 9 6" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <rect x="22" y="16" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2.8" fill="none"/>
+          <line x1="25" y1="21" x2="31" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="25" y1="25" x2="29" y2="25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>SpeakLevel</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Confirmation banner -->
+    <section class="thanks-hero section-padding" style="padding-bottom: var(--space-8)">
+      <div class="container container--narrow" style="text-align:center">
+        <div class="thanks-check" aria-hidden="true">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="30" fill="var(--color-primary)" opacity="0.12"/>
+            <circle cx="32" cy="32" r="22" fill="var(--color-primary)"/>
+            <path d="M22 32l7 7 13-14" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <p class="eyebrow" style="margin-top: var(--space-4)">Step 1 of 2 Complete</p>
+        <h1 style="margin: var(--space-3) 0 var(--space-4)">Got it &mdash; your details are in.</h1>
+        <p style="font-size: var(--text-lg); max-width: 580px; margin: 0 auto var(--space-6); color: var(--color-text-muted)">
+          You&rsquo;re one step away from your personalised plan. <strong>Now pick a time</strong> for your free 30-minute Job-Readiness Audit below &mdash; your coach will have read your intake before the call.
+        </p>
+
+        <div class="thanks-steps" role="list">
+          <div class="thanks-step thanks-step--done" role="listitem">
+            <span class="thanks-step-num">1</span>
+            <span class="thanks-step-label">Intake form</span>
+            <span class="thanks-step-status">Done</span>
+          </div>
+          <div class="thanks-step thanks-step--active" role="listitem">
+            <span class="thanks-step-num">2</span>
+            <span class="thanks-step-label">Book your audit</span>
+            <span class="thanks-step-status">Pick a time &darr;</span>
+          </div>
+          <div class="thanks-step" role="listitem">
+            <span class="thanks-step-num">3</span>
+            <span class="thanks-step-label">Get your plan</span>
+            <span class="thanks-step-status">On the call</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendly embed -->
+    <section class="thanks-calendly" style="padding: 0 var(--space-4) var(--space-12)">
+      <div class="container">
+        <div class="calendly-wrap">
+          <!-- Calendly inline widget -->
+          <div class="calendly-inline-widget"
+               data-url="https://calendly.com/hello-speaklevel/job-readiness-audit?hide_gdpr_banner=1&primary_color=01696f"
+               style="min-width:320px;height:760px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+          <!-- Listen for the Calendly "event_scheduled" message and redirect home with a celebratory flag -->
+          <script>
+            (function () {
+              function isCalendlyEvent(e) {
+                return e && e.data && typeof e.data === 'object' &&
+                       e.data.event && e.data.event.indexOf('calendly.') === 0;
+              }
+              window.addEventListener('message', function (e) {
+                if (!isCalendlyEvent(e)) return;
+                if (e.data.event === 'calendly.event_scheduled') {
+                  // Send the user home with a flag so we can show a "You're booked" banner
+                  setTimeout(function () {
+                    window.location.href = './index.html?booked=1';
+                  }, 1200);
+                }
+              });
+            })();
+          </script>
+
+          <!-- Fallback for users with JS off / blockers -->
+          <noscript>
+            <p style="text-align:center; padding: var(--space-6); background: var(--color-surface); border-radius: var(--radius-lg); border: 1px solid var(--color-border)">
+              Calendar didn&rsquo;t load? <a href="https://calendly.com/hello-speaklevel/job-readiness-audit" target="_blank" rel="noopener">Book your audit on Calendly</a>.
+            </p>
+          </noscript>
+        </div>
+
+        <p class="thanks-fallback">
+          Trouble seeing the calendar? <a href="https://calendly.com/hello-speaklevel/job-readiness-audit" target="_blank" rel="noopener noreferrer">Open it in a new tab</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- What to expect -->
+    <section class="thanks-expect section-padding" style="background: var(--color-surface); padding-top: var(--space-10); padding-bottom: var(--space-10)">
+      <div class="container container--narrow">
+        <h2 style="text-align:center; margin-bottom: var(--space-6); font-size: 1.5rem">What to Expect on Your Call</h2>
+        <ul class="check-list" role="list" style="max-width: 540px; margin: 0 auto">
+          <li>30 minutes, free, no obligation &mdash; we just talk through your intake.</li>
+          <li>You&rsquo;ll leave with 3 specific things to work on first.</li>
+          <li>If the Kit is right for you, we&rsquo;ll show you how to use it. If it isn&rsquo;t, we&rsquo;ll tell you that too.</li>
+          <li>No pressure to buy anything on the call.</li>
+        </ul>
+
+        <div style="text-align:center; margin-top: var(--space-8)">
+          <a href="./index.html" class="thanks-back-link">&larr; Back to home</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>

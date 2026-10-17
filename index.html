@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeakLevel — Workplace English for Migrants in Australia</title>
+  <meta name="description" content="SpeakLevel helps migrants in Australia get job-ready with workplace English — interviews, meetings, phone calls, emails, and Australian workplace culture.">
+  <meta property="og:title" content="SpeakLevel — Workplace English for Migrants in Australia">
+  <meta property="og:description" content="Workplace English that gets migrants hired and fairly paid in Australia.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://speaklevel.com.au">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700&display=swap">
+  <link rel="stylesheet" href="./style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SpeakLevel",
+    "url": "https://speaklevel.com.au",
+    "email": "hello@speaklevel.com.au",
+    "description": "Workplace English coaching and resources for migrants in Australia.",
+    "areaServed": "Australia",
+    "priceRange": "A$9–A$97"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="SpeakLevel home">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="16" fill="none" stroke="var(--color-border-strong,#ccc)" stroke-width="3" stroke-dasharray="75 26" stroke-dashoffset="-13" stroke-linecap="round" opacity="0.3"/>
+          <circle cx="20" cy="20" r="16" fill="none" stroke="var(--color-primary)" stroke-width="3" stroke-dasharray="52 49" stroke-dashoffset="-13" stroke-linecap="round"/>
+          <line x1="14" y1="22" x2="17" y2="18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="17" y1="18" x2="23" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="23" y1="22" x2="26" y2="17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="2" fill="var(--color-primary)"/>
+        </svg>
+        <span>SpeakLevel</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="./kit.html">The Kit</a></li>
+        <li><a href="#coaching">Coaching</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="https://calendly.com/hello-speaklevel/job-readiness-audit" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--nav">Book Free Audit</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#how-it-works" data-mobile-link>How It Works</a>
+      <a href="./kit.html">The Kit</a>
+      <a href="#coaching" data-mobile-link>Coaching</a>
+      <a href="https://calendly.com/hello-speaklevel/job-readiness-audit" target="_blank" rel="noopener noreferrer">Book Free Audit</a>
+    </div>
+  </nav>
+
+  <!-- ===== Booked-confirmation banner (only renders when ?booked=1 is in URL) ===== -->
+  <div id="booked-banner" class="booked-banner" hidden role="status" aria-live="polite">
+    <div class="booked-banner-inner">
+      <span class="booked-banner-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="11" fill="#ffffff" opacity="0.18"/>
+          <path d="M7 12.5l3.2 3.2L17 9" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </span>
+      <p class="booked-banner-text">
+        <strong>You&rsquo;re booked.</strong> Your audit is locked in &mdash; check your email for the confirmation and calendar invite. See you on the call.
+      </p>
+      <button type="button" class="booked-banner-close" aria-label="Dismiss" data-booked-dismiss>&times;</button>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===== SECTION 1: HERO — Mau Principle 1: frame problem + solution in first 3 screens ===== -->
+    <section class="hero section-padding">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <span class="chip chip--teal" style="margin-bottom:var(--space-4)">For Migrants in Australia</span>
+            <h1>You Speak English. But Australian Workplaces Still Feel Closed.</h1>
+            <p class="hero-sub">SpeakLevel teaches the workplace English migrants actually need — interviews, meetings, phone calls, and the unwritten rules of Australian jobs.</p>
+            <div class="hero-ctas">
+              <a href="#audit" class="btn btn--primary btn--lg">Take the Free Job-Readiness Audit</a>
+              <a href="./kit.html" class="btn btn--amber btn--lg">Get the Kit — A$97</a>
+            </div>
+            <p class="hero-small">Free 30-minute audit. Personalised plan. No obligation.</p>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-gauge-card">
+              <p class="hero-gauge-label">Where You Are Now</p>
+              <div class="hero-journey">
+                <div class="hero-journey-row">
+                  <span class="hero-journey-dot hero-journey-dot--current"></span>
+                  <div class="hero-journey-text">
+                    <span class="hero-journey-title">Today</span>
+                    <span class="hero-journey-sub">Capable, but stuck</span>
+                  </div>
+                </div>
+                <div class="hero-journey-line"></div>
+                <div class="hero-journey-row">
+                  <span class="hero-journey-dot hero-journey-dot--mid"></span>
+                  <div class="hero-journey-text">
+                    <span class="hero-journey-title">In 30 days</span>
+                    <span class="hero-journey-sub">Speak up in meetings</span>
+                  </div>
+                </div>
+                <div class="hero-journey-line"></div>
+                <div class="hero-journey-row">
+                  <span class="hero-journey-dot hero-journey-dot--end"></span>
+                  <div class="hero-journey-text">
+                    <span class="hero-journey-title">In 90 days</span>
+                    <span class="hero-journey-sub">Job-ready &middot; fairly paid</span>
+                  </div>
+                </div>
+              </div>
+              <p class="hero-gauge-prompt">See your starting point &darr;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: AHA STAT — Mau Principle 2: aha moment in under 1 minute ===== -->
+    <section class="aha-stat section-padding">
+      <div class="container container--narrow">
+        <div class="section-header">
+          <p class="eyebrow">Why This Matters</p>
+        </div>
+        <div class="aha-card">
+          <p class="aha-big">30%</p>
+          <p class="aha-text">of Australia's workforce are migrants — and workplace English is the <strong>#1 reported barrier</strong> to getting hired and promoted.</p>
+          <p class="aha-attrib">If you're capable but feel held back, it's not your skills. It's the workplace English nobody taught you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: REFLECTIVE QUESTION — Mau Principles 3+4: make user convince themselves + reflect ===== -->
+    <section id="industries" class="industries section-padding">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Make It Personal</p>
+          <h2>What Industry Are You In?</h2>
+          <p>The English you need depends on your work. Pick yours — we'll show you what to focus on.</p>
+        </div>
+        <div class="industries-grid">
+
+          <a href="./intake.html?industry=hospitality" class="industry-card">
+            <div class="industry-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <h3>Hospitality, Retail &amp; Customer Service</h3>
+            <p>Cafés, restaurants, shops, call centres, front-of-house roles.</p>
+            <ul class="check-list" role="list">
+              <li>Greeting customers naturally</li>
+              <li>Handling complaints calmly</li>
+              <li>Australian small-talk that builds tips</li>
+            </ul>
+            <span class="industry-cta">Get my plan <span aria-hidden="true">&rarr;</span></span>
+          </a>
+
+          <a href="./intake.html?industry=healthcare" class="industry-card">
+            <div class="industry-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Healthcare, Aged Care &amp; Disability</h3>
+            <p>Nursing, support work, allied health, NDIS roles.</p>
+            <ul class="check-list" role="list">
+              <li>Documenting handovers clearly</li>
+              <li>Speaking to families with care</li>
+              <li>Australian medical terminology</li>
+            </ul>
+            <span class="industry-cta">Get my plan <span aria-hidden="true">&rarr;</span></span>
+          </a>
+
+          <a href="./intake.html?industry=trades" class="industry-card">
+            <div class="industry-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Trades, Construction &amp; Logistics</h3>
+            <p>Warehousing, delivery, building, electrical, plumbing.</p>
+            <ul class="check-list" role="list">
+              <li>Site safety conversations</li>
+              <li>Toolbox talks &amp; instructions</li>
+              <li>Asking for help without losing face</li>
+            </ul>
+            <span class="industry-cta">Get my plan <span aria-hidden="true">&rarr;</span></span>
+          </a>
+
+        </div>
+        <p class="industries-other">Different industry? <a href="./intake.html">Tell us about your work</a> and we'll tailor your plan.</p>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: TRY THE PRODUCT — Mau Principle 5: let user try main feature during onboarding ===== -->
+    <section id="audit" class="try-product section-padding">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Try It Free</p>
+          <h2>Three Real Workplace Phrases. Try Them Now.</h2>
+          <p>This is the kind of English the Kit teaches — practical, professional, Australian.</p>
+        </div>
+        <div class="try-grid">
+
+          <div class="try-card">
+            <span class="try-tag">Asking for help</span>
+            <p class="try-phrase-bad"><span class="try-label">Direct:</span> &ldquo;I don't understand. Tell me again.&rdquo;</p>
+            <p class="try-phrase-good"><span class="try-label">Australian:</span> &ldquo;Sorry, would you mind running me through that one more time?&rdquo;</p>
+            <p class="try-why">Why it works: softens the request and keeps you professional.</p>
+          </div>
+
+          <div class="try-card">
+            <span class="try-tag">When you're behind</span>
+            <p class="try-phrase-bad"><span class="try-label">Direct:</span> &ldquo;I cannot finish today.&rdquo;</p>
+            <p class="try-phrase-good"><span class="try-label">Australian:</span> &ldquo;Just a heads up — I'm running a bit behind on this. Can I get it to you tomorrow morning?&rdquo;</p>
+            <p class="try-why">Why it works: shows ownership and offers a fix.</p>
+          </div>
+
+          <div class="try-card">
+            <span class="try-tag">Disagreeing politely</span>
+            <p class="try-phrase-bad"><span class="try-label">Direct:</span> &ldquo;No, that is wrong.&rdquo;</p>
+            <p class="try-phrase-good"><span class="try-label">Australian:</span> &ldquo;I see what you mean. Could we also look at it from this angle?&rdquo;</p>
+            <p class="try-why">Why it works: keeps your voice in the room without conflict.</p>
+          </div>
+
+        </div>
+        <div class="try-cta-row">
+          <a href="./kit.html" class="btn btn--amber btn--lg">Get 200+ Phrases — Inside the Kit</a>
+          <p class="try-cta-sub">Real scripts for meetings, emails, phone calls, interviews, and mistakes at work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: JOURNEY SUMMARY — Mau Principle 7: where you are → where you're going ===== -->
+    <section id="how-it-works" class="journey section-padding">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Your 90-Day Path</p>
+          <h2>Where You Are Now &rarr; Where You'll Be in 90 Days</h2>
+        </div>
+        <div class="journey-grid">
+
+          <div class="journey-stage">
+            <span class="journey-stage-num">Day 0</span>
+            <h3>Today</h3>
+            <p class="journey-stage-mood">Capable, but uncertain.</p>
+            <ul class="check-list check-list--grey" role="list">
+              <li>You freeze when your manager talks fast</li>
+              <li>Interviews feel like guessing games</li>
+              <li>You stay quiet in meetings even when you have ideas</li>
+            </ul>
+          </div>
+
+          <div class="journey-stage journey-stage--mid">
+            <span class="journey-stage-num">Day 30</span>
+            <h3>After Foundations + Kit</h3>
+            <p class="journey-stage-mood">Speaking up at work.</p>
+            <ul class="check-list" role="list">
+              <li>Scripts ready for the conversations that used to scare you</li>
+              <li>Meeting language that lets you contribute</li>
+              <li>Cleaner, more confident emails</li>
+            </ul>
+          </div>
+
+          <div class="journey-stage journey-stage--end">
+            <span class="journey-stage-num">Day 90</span>
+            <h3>Job-Ready &amp; Fairly Paid</h3>
+            <p class="journey-stage-mood">Taken seriously at work.</p>
+            <ul class="check-list" role="list">
+              <li>Interview answers that get callbacks</li>
+              <li>Negotiating pay without backing down</li>
+              <li>Your voice in the room — every time</li>
+            </ul>
+          </div>
+
+        </div>
+        <div style="text-align:center; margin-top:var(--space-10)">
+          <a href="https://calendly.com/hello-speaklevel/job-readiness-audit" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Start with a Free Audit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 6: COST COMPARISON — Mau Principle 8: tell upfront it's paid + compare to familiar cost ===== -->
+    <section class="cost-compare section-padding">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Honest Pricing</p>
+          <h2>Less Than One Week of Coffee &amp; Lunch</h2>
+          <p>The Kit is A$97 — once. Here's what that buys you:</p>
+        </div>
+        <div class="cost-grid">
+
+          <div class="cost-card cost-card--muted">
+            <p class="cost-label">A typical work week</p>
+            <ul class="cost-list" role="list">
+              <li><span class="cost-item">5 coffees</span><span class="cost-amount">A$25</span></li>
+              <li><span class="cost-item">3 lunches out</span><span class="cost-amount">A$60</span></li>
+              <li><span class="cost-item">2 takeaways</span><span class="cost-amount">A$28</span></li>
+            </ul>
+            <p class="cost-total">Total: A$113 — gone in 7 days.</p>
+          </div>
+
+          <div class="cost-card cost-card--featured">
+            <span class="chip chip--amber">One-Time Purchase</span>
+            <p class="cost-label">Employment Readiness Kit</p>
+            <ul class="cost-list" role="list">
+              <li><span class="cost-item">200+ workplace phrases</span><span class="cost-check">&#10003;</span></li>
+              <li><span class="cost-item">10 interview question scripts</span><span class="cost-check">&#10003;</span></li>
+              <li><span class="cost-item">30-Day Speak-Up Challenge</span><span class="cost-check">&#10003;</span></li>
+              <li><span class="cost-item">Australian resume template</span><span class="cost-check">&#10003;</span></li>
+              <li><span class="cost-item">Aussie slang &amp; culture decoder</span><span class="cost-check">&#10003;</span></li>
+            </ul>
+            <p class="cost-total cost-total--featured">A$97 — yours forever.</p>
+            <a href="./kit.html" class="btn btn--amber btn--full">Get the Kit Now</a>
+          </div>
+
+        </div>
+        <div class="cost-foot-card">
+          <p class="cost-foot-text">Or start with the <strong>Foundations Guide &mdash; A$9</strong> &mdash; this gives you <a href="https://payhip.com/b/gx4bk" target="_blank" rel="noopener noreferrer">50 essential phrases &amp; a 30-day plan</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 7: SOCIAL PROOF + COMMITMENT — Mau Principle 9: end with social proof ===== -->
+    <section id="coaching" class="proof-commit section-padding">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Real Migrants. Real Workplaces.</p>
+          <h2>Built With Migrants Like You</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="card card--teal-left testimonial-card">
+            <blockquote>&ldquo;I used to freeze when my manager spoke quickly. After the Kit, I started understanding everything.&rdquo;</blockquote>
+            <cite>— Fatima, Production Worker, Western Sydney</cite>
+          </div>
+          <div class="card card--teal-left testimonial-card">
+            <blockquote>&ldquo;The interview scripts gave me a structure I could actually use. I got the job on my third interview.&rdquo;</blockquote>
+            <cite>— Khaled, Warehouse Supervisor, Parramatta</cite>
+          </div>
+        </div>
+
+        <div class="commit-card">
+          <h3>Are You Ready to Commit to 30 Minutes?</h3>
+          <p>That's all the free audit takes. We'll review where you are, the industry you're targeting, and the specific gaps holding you back. You'll leave with a clear plan.</p>
+          <div class="final-cta-buttons">
+            <a href="https://calendly.com/hello-speaklevel/job-readiness-audit" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">Yes — Book Free Audit</a>
+            <a href="./kit.html" class="btn btn--amber btn--lg">I'm Ready — Get the Kit</a>
+          </div>
+          <p class="commit-foot">No subscription. No obligation. Built for migrants in Australia.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="/" class="footer-logo" aria-label="SpeakLevel home">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <circle cx="20" cy="20" r="16" fill="none" stroke="var(--color-border-strong,#ccc)" stroke-width="3" stroke-dasharray="75 26" stroke-dashoffset="-13" stroke-linecap="round" opacity="0.3"/>
+            <circle cx="20" cy="20" r="16" fill="none" stroke="var(--color-primary)" stroke-width="3" stroke-dasharray="52 49" stroke-dashoffset="-13" stroke-linecap="round"/>
+            <line x1="14" y1="22" x2="17" y2="18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="17" y1="18" x2="23" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="23" y1="22" x2="26" y2="17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="20" cy="20" r="2" fill="var(--color-primary)"/>
+          </svg>
+          <span>SpeakLevel</span>
+        </a>
+        <ul class="footer-links" role="list">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="./kit.html">The Kit</a></li>
+          <li><a href="#coaching">Coaching</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>SpeakLevel &middot; <a href="https://speaklevel.com.au" target="_blank" rel="noopener noreferrer">speaklevel.com.au</a> &middot; <a href="mailto:hello@speaklevel.com.au">hello@speaklevel.com.au</a></p>
+        <p>Workplace English coaching and resources for migrants in Australia.</p>
+        <p>&copy; 2026 SpeakLevel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
