@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free Job-Readiness Audit — SpeakLevel</title>
   <meta name="description" content="Get your free Job-Readiness Audit. We'll show you where you stand and what to fix first to get hired and paid fairly in Australia.">
+  <link rel="canonical" href="https://speaklevel.com.au/intake.html">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <meta name="theme-color" content="#2A8C84">
+  <meta property="og:site_name" content="SpeakLevel">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Job-Readiness Audit — SpeakLevel">
+  <meta property="og:description" content="Tell us where you’re at in 2 minutes. We’ll show you what to fix first to get job-ready in Australia.">
+  <meta property="og:url" content="https://speaklevel.com.au/intake.html">
+  <meta property="og:image" content="https://speaklevel.com.au/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SpeakLevel — Workplace English for migrants in Australia">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Job-Readiness Audit — SpeakLevel">
+  <meta name="twitter:description" content="Tell us where you’re at in 2 minutes. We’ll show you what to fix first to get job-ready in Australia.">
+  <meta name="twitter:image" content="https://speaklevel.com.au/og-image.png">
+  <script>try{var t=localStorage.getItem("sl-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700&display=swap">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -15,11 +35,12 @@
     <div class="nav-inner">
       <a href="./index.html" class="nav-logo" aria-label="SpeakLevel home">
         <svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <path d="M8 28V14a2 2 0 012-2h6a2 2 0 012 2v14" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <path d="M5 10C5 6 9 3 14 3s9 3 9 6" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-          <rect x="22" y="16" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2.8" fill="none"/>
-          <line x1="25" y1="21" x2="31" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <line x1="25" y1="25" x2="29" y2="25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="16" fill="none" stroke="var(--color-border-strong,#ccc)" stroke-width="3" stroke-dasharray="75 26" stroke-dashoffset="-13" stroke-linecap="round" opacity="0.3"/>
+          <circle cx="20" cy="20" r="16" fill="none" stroke="var(--color-primary)" stroke-width="3" stroke-dasharray="52 49" stroke-dashoffset="-13" stroke-linecap="round"/>
+          <line x1="14" y1="22" x2="17" y2="18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="17" y1="18" x2="23" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="23" y1="22" x2="26" y2="17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="2" fill="var(--color-primary)"/>
         </svg>
         <span>SpeakLevel</span>
       </a>
@@ -60,20 +81,21 @@
           <input type="hidden" name="_subject" value="New SpeakLevel Intake Form Submission">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://speaklevel.com.au/intake-thanks.html">
+          <!-- _next is rewritten by app.js to the thanks page on whichever site the form is on (preview or live) -->
+          <input type="hidden" name="_next" value="https://speaklevel.com.au/intake-thanks.html" data-next-page="intake-thanks.html">
           <!-- Honeypot -->
           <input type="text" name="_honey" style="display:none">
 
           <!-- Name -->
           <div class="form-group">
             <label for="full-name">Full Name <span class="required">*</span></label>
-            <input type="text" id="full-name" name="Full Name" required placeholder="Your full name">
+            <input type="text" id="full-name" name="Full Name" required autocomplete="name" placeholder="Your full name">
           </div>
 
           <!-- Email -->
           <div class="form-group">
             <label for="email">Email Address <span class="required">*</span></label>
-            <input type="email" id="email" name="Email" required placeholder="you@example.com">
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
           </div>
 
           <!-- English confidence at work -->
@@ -192,9 +214,17 @@
             <textarea id="notes" name="Additional Notes" rows="3" placeholder="Optional — e.g. your first language, how long you've been in Australia, specific goals"></textarea>
           </div>
 
+          <!-- Consent -->
+          <div class="form-group form-group--consent">
+            <label class="consent-option">
+              <input type="checkbox" name="Privacy consent" value="Agreed" required>
+              <span>I agree to SpeakLevel using these details to prepare my free audit and contact me, as explained in the <a href="./privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. <span class="required">*</span></span>
+            </label>
+          </div>
+
           <!-- Submit -->
           <button type="submit" class="btn btn--primary btn--lg btn--full">Submit — Get My Free Audit</button>
-          <p class="form-note">Your information is private and only shared with your SpeakLevel coach.</p>
+          <p class="form-note">Your details go only to your SpeakLevel coach. We never sell your information. <a href="./privacy.html">Privacy Policy</a></p>
         </form>
       </div>
     </section>
@@ -206,19 +236,20 @@
       <div class="footer-top">
         <a href="./index.html" class="footer-logo" aria-label="SpeakLevel home">
           <svg width="28" height="28" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <path d="M8 28V14a2 2 0 012-2h6a2 2 0 012 2v14" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <path d="M5 10C5 6 9 3 14 3s9 3 9 6" stroke="#4FA8A3" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-            <rect x="22" y="16" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2.8" fill="none"/>
-            <line x1="25" y1="21" x2="31" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <line x1="25" y1="25" x2="29" y2="25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
+          <circle cx="20" cy="20" r="16" fill="none" stroke="var(--color-border-strong,#ccc)" stroke-width="3" stroke-dasharray="75 26" stroke-dashoffset="-13" stroke-linecap="round" opacity="0.3"/>
+          <circle cx="20" cy="20" r="16" fill="none" stroke="var(--color-primary)" stroke-width="3" stroke-dasharray="52 49" stroke-dashoffset="-13" stroke-linecap="round"/>
+          <line x1="14" y1="22" x2="17" y2="18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="17" y1="18" x2="23" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="23" y1="22" x2="26" y2="17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="2" fill="var(--color-primary)"/>
+        </svg>
           <span>SpeakLevel</span>
         </a>
         <ul class="footer-links" role="list">
           <li><a href="./index.html#how-it-works">How It Works</a></li>
           <li><a href="./kit.html">The Kit</a></li>
           <li><a href="./index.html#coaching">Coaching</a></li>
-          <li><a href="#">Privacy</a></li>
+          <li><a href="./privacy.html">Privacy</a></li>
         </ul>
       </div>
       <div class="footer-bottom">
