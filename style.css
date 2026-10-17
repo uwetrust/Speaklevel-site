@@ -2780,3 +2780,23 @@ a[href^="mailto:"] {
     grid-template-columns: 1fr;
   }
 }
+
+/* Full product names in the menu need more room: use the hamburger menu below 1120px */
+@media (max-width: 1120px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+}
+
+/* Long product-name buttons wrap neatly on small screens */
+@media (max-width: 600px) {
+  .btn--lg,
+  .btn--full {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    max-width: 100%;
+  }
+  .final-cta-buttons .btn {
+    width: 100%;
+  }
+}
